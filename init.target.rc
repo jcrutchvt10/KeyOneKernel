@@ -61,10 +61,10 @@ on post-fs-data
     mkdir /data/misc/dts 0770 media audio
 
 #start camera server as daemon
-#service qcamerasvr /system/bin/mm-qcamera-daemon
- #   class late_start
- #   user camera
- #   group camera system inet input graphics
+service qcamerasvr /system/bin/mm-qcamera-daemon
+    class late_start
+    user camera
+    group camera system inet input graphics
 
 #enable zram
 on property:ro.config.zram=true

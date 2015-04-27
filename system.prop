@@ -25,6 +25,7 @@ debug.mdpcomp.logs=0
 dalvik.vm.heapsize=36m
 dev.pm.dyn_samplingrate=1
 persist.demo.hdmirotationlock=false
+debug.enable.sglscale=1
 
 #ro.hdmi.enable=true
 #tunnel.decode=true
@@ -137,3 +138,7 @@ vidc.enc.narrow.searchrange=1
 
 #property to enable fingerprint
 persist.qfp=false
+
+#min/max cpu in core control
+ro.core_ctl_min_cpu=2
+ro.core_ctl_max_cpu=4

@@ -26,6 +26,8 @@ dalvik.vm.heapsize=36m
 dev.pm.dyn_samplingrate=1
 persist.demo.hdmirotationlock=false
 debug.enable.sglscale=1
+# disable vsync for cpu render apps
+debug.cpurend.vsync=false
 
 #ro.hdmi.enable=true
 #tunnel.decode=true
@@ -124,6 +126,9 @@ use.voice.path.for.pcm.voip=true
 ro.fm.transmitter=false
 #enable dsp gapless mode by default
 audio.offload.gapless.enabled=true
+
+#enable pbe effects
+audio.safx.pbe.enabled=true
 
 #Set composition for USB
 persist.sys.usb.config=diag,serial_smd,rmnet_ipa,adb

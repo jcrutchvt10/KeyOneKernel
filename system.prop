@@ -78,8 +78,9 @@ persist.timed.enable=true
 #
 # system prop for opengles version
 #
-# 131072 is decimal for 0x30000 to report version 3
-ro.opengles.version=196608
+# 196608 is decimal for 0x30000 to report major/minor versions as 3/0
+# 196609 is decimal for 0x30001 to report major/minor versions as 3/1
+ro.opengles.version=196609
 
 # System property for cabl
 ro.qualcomm.cabl=2
@@ -152,3 +153,6 @@ ro.core_ctl_max_cpu=4
 
 #property to enable DS2 dap
 audio.dolby.ds2.enabled=true
+
+#HWUI properties
+ro.hwui.text_large_cache_height=2048

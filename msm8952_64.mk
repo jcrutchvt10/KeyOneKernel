@@ -34,9 +34,6 @@ PRODUCT_BOOT_JARS += qcmediaplayer \
 
 PRODUCT_BOOT_JARS += vcard
 
-# default is nosdcard, S/W button enabled in resource
-PRODUCT_CHARACTERISTICS := nosdcard
-
 #Android EGL implementation
 PRODUCT_PACKAGES += libGLES_android
 
@@ -148,6 +145,7 @@ PRODUCT_LOCALES += th_TH vi_VN tl_PH hi_IN ar_EG ru_RU tr_TR pt_BR bn_IN mr_IN t
 # Add the overlay path
 ifeq ($(strip $(TARGET_USES_QTIC)),true)
 PRODUCT_PACKAGE_OVERLAYS := $(QCPATH)/qrdplus/Extension/res-overlay \
+        $(QCPATH)/qrdplus/globalization/multi-language/res-overlay \
         $(PRODUCT_PACKAGE_OVERLAYS)
 endif
 

@@ -160,7 +160,7 @@ ro.vendor.gt_library=libqti-gt.so
 vidc.enc.narrow.searchrange=1
 
 #property to enable fingerprint
-persist.qfp=false
+#persist.qfp=false
 
 #min/max cpu in core control
 ro.core_ctl_min_cpu=2

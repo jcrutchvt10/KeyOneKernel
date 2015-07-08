@@ -134,13 +134,14 @@ ro.fm.transmitter=false
 #enable dsp gapless mode by default
 audio.offload.gapless.enabled=true
 
+#multi offload
+audio.offload.multiple.enabled=true
+audio.offload.maxsessions=2
+
 #enable pbe effects
 audio.safx.pbe.enabled=true
 #property for AudioSphere Post processing
 audio.pp.asphere.enabled=false
-
-#property for mch down sampling for clip > 48k
-audio.playback.mch.downsample=true
 
 #Set composition for USB
 persist.sys.usb.config=diag,serial_smd,rmnet_ipa,adb
@@ -182,7 +183,10 @@ ro.sys.fw.use_trim_settings=true
 ro.sys.fw.empty_app_percent=50
 ro.sys.fw.trim_empty_percent=100
 ro.sys.fw.trim_cache_percent=100
-ro.sys.fw.trim_enable_memory=1073741824
+ro.sys.fw.trim_enable_memory=2147483648
 
 #Optimal dex2oat threads for faster app installation
 ro.sys.fw.dex2oat_thread_count=4
+
+# set cutoff voltage to 3200mV
+ro.cutoff_voltage_mv=3200

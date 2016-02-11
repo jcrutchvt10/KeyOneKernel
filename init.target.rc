@@ -39,8 +39,7 @@ on post-fs
     export LD_PRELOAD libNimsWrap.so
 
 on fs
-    wait /dev/block/platform/soc.0/7824900.sdhci/mmcblk0
-    symlink /dev/block/platform/soc.0/7824900.sdhci /dev/block/bootdevice
+    wait /dev/block/bootdevice
 
     mount_all fstab.qcom
 
@@ -73,6 +72,7 @@ on post-fs-data
     mkdir /persist/data/sfs 0700 system system
     mkdir /persist/data/tz 0700 system system
     mkdir /data/misc/dts 0770 media audio
+    mkdir /data/misc/hbtp 0750 system system
 
 #start camera server as daemon
 service qcamerasvr /system/bin/mm-qcamera-daemon
@@ -200,7 +200,13 @@ on property:sys.ims.DATA_DAEMON_STATUS=1
     start ims_rtp_daemon
     start imscmservice
 
-service ppd /system/vendor/bin/mm-pp-daemon
+service hbtp /system/vendor/bin/hbtp_daemon
+    class main
+    user system
+    group system
+    disabled
+
+service ppd /system/vendor/bin/mm-pp-dpps
     class late_start
     disabled
     user system
@@ -212,6 +218,18 @@ on property:init.svc.surfaceflinger=stopped
 
 on property:init.svc.surfaceflinger=running
     start ppd
+
+on property:init.svc.surfaceflinger=restarting
+    stop ppd
+
+on property:init.svc.zygote=stopped
+    stop ppd
+
+on property:init.svc.zygote=running
+    start ppd
+
+on property:init.svc.zygote=restarting
+    stop ppd
 
 on charger
     wait /dev/block/bootdevice/by-name/system

@@ -34,12 +34,16 @@
    <integer-array name="flingboost_param_value">
        <item>0x40800100</item> <!-- CPUBOOST_MIN_FREQ resource opcode-->
        <item>0x578</item>      <!-- CPUBOOST MIN_FREQ resource value-->
+       <item>0x40C38000</item> <!-- SCHED_FA_GROUP resource opcode-->
+       <item>0x1</item>        <!-- SCHED_FA_GROUP resource value-->
    </integer-array>
    <!-- Whether cpu boost is enabled for horizontal scroll. -->
    <bool name="config_enableCpuBoostForScroller">true</bool>
    <integer-array name="scrollboost_param_value">
        <item>0x40800100</item> <!-- CPUBOOST_MIN_FREQ resource opcode-->
        <item>0x578</item>      <!-- CPUBOOST MIN_FREQ resource value-->
+       <item>0x40C38000</item> <!-- SCHED_FA_GROUP resource opcode-->
+       <item>0x1</item>        <!-- SCHED_FA_GROUP resource value-->
    </integer-array>
    <!-- Whether cpu boost is enabled for application's 1st launch. -->
    <bool name="config_enableCpuBoostForAppLaunch">true</bool>

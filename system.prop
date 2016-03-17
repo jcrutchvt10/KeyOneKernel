@@ -1,5 +1,5 @@
 #
-# system.prop for titanium
+# system.prop for msm8953
 #
 
 rild.libpath=/vendor/lib64/libril-qc-qmi-1.so
@@ -103,7 +103,7 @@ ro.qc.sdk.audio.fluencetype=none
 persist.audio.fluence.voicecall=true
 persist.audio.fluence.voicerec=false
 persist.audio.fluence.speaker=true
-#Set for titanium
+#Set for msm8953
 tunnel.audio.encode = false
 #Buffer size in kbytes for compress offload playback
 audio.offload.buffer.size.kb=64
@@ -161,6 +161,7 @@ persist.debug.coresight.config=stm-events
 
 #property for vendor specific library
 ro.vendor.gt_library=libqti-gt.so
+ro.vendor.at_library=libqti-at.so
 
 #property to enable narrow search range for video encoding
 vidc.enc.disable_bframes=1
@@ -172,9 +173,6 @@ vidc.enc.dcvs.extra-buff-count=2
 
 # system property to accelerate Progressive Download using STA
 persist.mm.sta.enable=0
-
-# Set default power mode to low power for encoder
-vidc.debug.perf.mode=2
 
 #property to enable fingerprint
 persist.qfp=false
@@ -217,11 +215,17 @@ ro.am.reschedule_service=true
 #Optimal dex2oat threads for faster app installation
 ro.sys.fw.dex2oat_thread_count=4
 
-# set cutoff voltage to 3200mV
-ro.cutoff_voltage_mv=3200
+# Create zram disk
+ro.config.zram=true
+
+# set cutoff voltage to 3400mV
+ro.cutoff_voltage_mv=3400
 
 #set device emmc size
 ro.emmc_size=16GB
 
 #force HAL1 for below packages
 camera.hal1.packagelist=com.skype.raider,com.google.android.talk
+
+#Enable FR27607-RIL to send ONLINE cmd in bootup
+persist.radio.poweron_opt=1

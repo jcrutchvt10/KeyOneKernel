@@ -123,6 +123,9 @@ audio.offload.track.enable=true
 #Enable music through deep buffer
 audio.deep_buffer.media=true
 
+#Default pcm audio sink buffer size in msec. This is used in calculating framecount
+media.stagefright.audio.sink=280
+
 #enable downsampling for multi-channel content > 48Khz
 audio.playback.mch.downsample=true
 

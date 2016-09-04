@@ -237,6 +237,9 @@ camera.hal1.packagelist=com.skype.raider,com.google.android.talk
 #low power mode for camera
 camera.lowpower.record.enable=1
 
+#In video expect camera time source as monotonic
+media.camera.ts.monotonic=1
+
 #properties for limiting preview size in camera
 camera.display.umax=1920x1080
 camera.display.lmax=1280x720

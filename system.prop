@@ -112,6 +112,9 @@ vidc.disable.split.mode=1
 vidc.dec.downscalar_width=1920
 vidc.dec.downscalar_height=1088
 
+# disable PQ feature by default
+vidc.enc.disable.pq=true
+
 # Additional buffers shared between Camera and Video
 vidc.enc.dcvs.extra-buff-count=2
 
@@ -181,3 +184,6 @@ camera.lowpower.record.enable=1
 #properties for limiting preview size in camera
 camera.display.umax=1920x1080
 camera.display.lmax=1280x720
+
+#set cutoff voltage to 3400mV
+ro.cutoff_voltage_mv=3400

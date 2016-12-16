@@ -242,3 +242,6 @@ camera.lowpower.record.enable=1
 #properties for limiting preview size in camera
 camera.display.umax=1920x1080
 camera.display.lmax=1280x720
+
+#Offset for audio timestamp
+persist.qmmf.timestamp.adjust=-150000

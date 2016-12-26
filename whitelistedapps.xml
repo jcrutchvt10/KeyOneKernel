@@ -75,4 +75,27 @@
         <AppAttributes
             PackageName="com.tencent.mm" />
     </NetTriggerApps>
+    <AppTriggerApps>
+        <AppAttributes PackageName="com.sina.weibo" />
+        <AppAttributes PackageName="com.taobao.taobao" />
+        <AppAttributes PackageName="com.tmall.wireless" />
+        <AppAttributes PackageName="com.qzone" />
+        <AppAttributes PackageName="com.Qunar" />
+        <AppAttributes PackageName="com.letv.android.client" />
+        <AppAttributes PackageName="com.pplive.androidphone" />
+        <AppAttributes PackageName="com.jingdong.app.mall" />
+        <AppAttributes PackageName="com.shuqi.controller" />
+        <AppAttributes PackageName="com.youdao.dict" />
+        <AppAttributes PackageName="com.edog" />
+        <AppAttributes PackageName="com.jiayuan" />
+        <AppAttributes PackageName="com.youdao.x86.dict" />
+        <AppAttributes PackageName="com.lingdong.client.android" />
+        <AppAttributes PackageName="com.mobi.common.main.wmfzlbizhi1111" />
+        <AppAttributes PackageName="com.autonavi.xmgd.navigator" />
+        <AppAttributes PackageName="com.tencent.mobileqq" />
+        <AppAttributes PackageName="com.ludashi.benchmark" />
+        <AppAttributes PackageName="com.tencent.qqpimsecure" />
+        <AppAttributes PackageName="com.taobao.trip" />
+        <AppAttributes PackageName="cn.wps.moffice_eng" />
+    </AppTriggerApps>
 </AppCatalog>

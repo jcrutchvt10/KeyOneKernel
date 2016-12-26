@@ -122,7 +122,7 @@ TARGET_HW_DISK_ENCRYPTION := true
 TARGET_CRYPTFS_HW_PATH := device/qcom/common/cryptfs_hw
 
 #Enabling IMS Feature
-TARGET_USES_IMS := TRUE
+TARGET_USES_IMS := true
 
 TARGET_FORCE_HWC_FOR_VIRTUAL_DISPLAYS := true
 

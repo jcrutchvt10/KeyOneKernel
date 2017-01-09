@@ -167,6 +167,9 @@ ro.sys.fw.dex2oat_thread_count=4
 # Create zram disk
 ro.config.zram=true
 
+#Expose aux camera for below packages
+camera.aux.packagelist=org.codeaurora.snapcam
+
 # set cutoff voltage to 3400mV
 ro.cutoff_voltage_mv=3400
 

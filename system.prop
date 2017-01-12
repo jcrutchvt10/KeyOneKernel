@@ -245,3 +245,6 @@ camera.display.lmax=1280x720
 
 #Offset for audio timestamp
 persist.qmmf.timestamp.adjust=-150000
+
+#isp clock optimization enable(1)/disable(0)
+persist.camera.isp.clock.optmz=0

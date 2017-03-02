@@ -294,3 +294,7 @@ service qmmf-server /system/bin/qmmf-server
     user media
     group audio camera
 
+service qmmf-webserver /system/bin/qmmf-webserver-zygote
+    class late_start
+    user media
+    group audio camera inet net_bt net_bt_admin net_bw_acct

@@ -60,7 +60,8 @@ persist.timed.enable=true
 #
 # 196608 is decimal for 0x30000 to report major/minor versions as 3/0
 # 196609 is decimal for 0x30001 to report major/minor versions as 3/1
-ro.opengles.version=196609
+# 196610 is decimal for 0x30002 to report major/minor versions as 3/2
+ro.opengles.version=196610
 
 # System property for cabl
 ro.qualcomm.cabl=2
@@ -108,6 +109,7 @@ debug.enable.gamed=0
 
 #property to enable narrow search range for video encoding
 vidc.enc.disable_bframes=1
+vidc.enc.disable_pframes=1
 vidc.disable.split.mode=1
 vidc.dec.downscalar_width=1920
 vidc.dec.downscalar_height=1088
@@ -165,6 +167,9 @@ ro.sys.fw.dex2oat_thread_count=4
 
 # Create zram disk
 ro.config.zram=true
+
+#Expose aux camera for below packages
+camera.aux.packagelist=org.codeaurora.snapcam
 
 # set cutoff voltage to 3400mV
 ro.cutoff_voltage_mv=3400

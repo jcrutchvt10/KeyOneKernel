@@ -16,7 +16,10 @@ TARGET_USES_MEDIA_EXTENSIONS := true
 ifeq ($(TARGET_ENABLE_QC_AV_ENHANCEMENTS), true)
 PRODUCT_COPY_FILES += device/qcom/msm8953_32/media/media_profiles_8953.xml:system/etc/media_profiles.xml \
                       device/qcom/msm8953_32/media/media_codecs_8953.xml:system/etc/media_codecs.xml \
-                      device/qcom/msm8953_32/media/media_codecs_performance_8953.xml:system/etc/media_codecs_performance.xml
+                      device/qcom/msm8953_32/media/media_codecs_performance_8953.xml:system/etc/media_codecs_performance.xml \
+                      device/qcom/msm8953_32/media/media_profiles_8953_v1.xml:system/etc/media_profiles_8953_v1.xml \
+                      device/qcom/msm8953_32/media/media_codecs_8953_v1.xml:system/etc/media_codecs_8953_v1.xml \
+                      device/qcom/msm8953_32/media/media_codecs_performance_8953_v1.xml:system/etc/media_codecs_performance_8953_v1.xml
 endif
 
 PRODUCT_COPY_FILES += device/qcom/msm8953_64/whitelistedapps.xml:system/etc/whitelistedapps.xml \
@@ -54,11 +57,11 @@ PRODUCT_CHARACTERISTICS := nosdcard
 
 # When can normal compile this module,  need module owner enable below commands 
 # font rendering engine feature switch
-#-include $(QCPATH)/common/config/rendering-engine.mk
-#ifneq (,$(strip $(wildcard $(PRODUCT_RENDERING_ENGINE_REVLIB))))
-#    MULTI_LANG_ENGINE := REVERIE
+-include $(QCPATH)/common/config/rendering-engine.mk
+ifneq (,$(strip $(wildcard $(PRODUCT_RENDERING_ENGINE_REVLIB))))
+    MULTI_LANG_ENGINE := REVERIE
 #    MULTI_LANG_ZAWGYI := REVERIE
-#endif
+endif
 
 
 
@@ -114,10 +117,8 @@ PRODUCT_LOCALES += th_TH vi_VN tl_PH hi_IN ar_EG ru_RU tr_TR pt_BR bn_IN mr_IN t
 
 # When can normal compile this module, need module owner enable below commands
 # Add the overlay path
-#PRODUCT_PACKAGE_OVERLAYS := $(QCPATH)/qrdplus/Extension/res \
-#        $(QCPATH)/qrdplus/globalization/multi-language/res-overlay \
-#        $(PRODUCT_PACKAGE_OVERLAYS)
 PRODUCT_PACKAGE_OVERLAYS := $(QCPATH)/qrdplus/Extension/res \
+        $(QCPATH)/qrdplus/globalization/multi-language/res-overlay \
         $(PRODUCT_PACKAGE_OVERLAYS)
 
 #for android_filesystem_config.h

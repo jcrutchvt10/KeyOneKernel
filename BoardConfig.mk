@@ -61,7 +61,7 @@ BOARD_OEMIMAGE_PARTITION_SIZE := 268435456
 BOARD_FLASH_BLOCK_SIZE := 131072 # (BOARD_KERNEL_PAGESIZE * 64)
 
 # Enable MDTP during recovery
-TARGET_USE_MDTP := true
+TARGET_USE_MDTP := false
 
 # Enable suspend during charger mode
 BOARD_CHARGER_ENABLE_SUSPEND := true

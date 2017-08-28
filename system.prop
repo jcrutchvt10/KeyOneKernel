@@ -249,5 +249,8 @@ persist.qmmf.timestamp.adjust=-150000
 #isp clock optimization enable(1)/disable(0)
 persist.camera.isp.clock.optmz=0
 
+#Disable PQ, yes(1)/no(0)
+vidc.enc.disable.pq=1
+
 #IPC webserver wifi mode, AP(1)/Client(0)
 persist.qmmf.ws.wifi.ap.mode=1
